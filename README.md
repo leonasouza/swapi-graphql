@@ -1,5 +1,5 @@
 # React + TypeScript + Vite
-![image](https://github.com/leonasouza/swapi-graphql/assets/55172899/c45378c2-5add-49fe-af45-9a37e6b40c04)
+![image](https://github.com/leonasouza/swapi-graphql/assets/55172899/46e99181-563e-49a7-98ea-cf2740be691b)
 
 This project uses GraphQL to consume data from the [Star Wars API](https://swapi.dev/). It was made using TDD (Test Driven Development) for study purposes.
 
