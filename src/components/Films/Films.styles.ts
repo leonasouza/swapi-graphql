@@ -16,6 +16,12 @@ export const Selector = styled.div`
 
 export const SelectButton = styled.button`
   background-color: #eee;
+
+  &:disabled {
+    background-color: #ddd;
+    color: #000;
+    border: 1px solid #000;
+  }
 `
 
 export const Film = styled.div`

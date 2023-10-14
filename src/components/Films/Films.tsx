@@ -13,7 +13,21 @@ import GET_FILM_BY_ID, {
 import * as S from './Films.styles.ts'
 
 export const Films = () => {
-  const [filmId, setFilmId] = useState<number>(1)
+  const [filmId, setFilmId] = useState<number>(4)
+
+  const handleSelectFilm = (option: number): void => {
+    type sortedOption = { [key: number]: number }
+    const sortedOptions: sortedOption = {
+      1: 4,
+      2: 5,
+      3: 6,
+      4: 1,
+      5: 2,
+      6: 3,
+    }
+
+    setFilmId(sortedOptions[option])
+  }
 
   const { loading, error, data } = useQuery<FilmInformation, FilmArguments>(
     GET_FILM_BY_ID,
@@ -36,7 +50,11 @@ export const Films = () => {
       <S.Header>Choose a Star Wars film</S.Header>
       <S.Selector>
         {options.map((option) => (
-          <S.SelectButton key={option} onClick={() => setFilmId(option)}>
+          <S.SelectButton
+            key={option}
+            onClick={() => handleSelectFilm(option)}
+            disabled={option === data?.film.episodeID}
+          >
             {option}
           </S.SelectButton>
         ))}

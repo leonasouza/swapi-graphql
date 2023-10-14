@@ -26,14 +26,14 @@ describe('Films component', () => {
         request: {
           query: GET_FILM_BY_ID,
           variables: {
-            filmId: 1,
+            filmId: 4,
           },
         },
         result: {
           data: {
             film: {
-              title: 'A New Hope',
-              releaseDate: '1977-05-25',
+              title: 'The Phantom Menace',
+              releaseDate: '1999-05-18',
             },
           },
         },
@@ -42,14 +42,14 @@ describe('Films component', () => {
         request: {
           query: GET_FILM_BY_ID,
           variables: {
-            filmId: 4,
+            filmId: 1,
           },
         },
         result: {
           data: {
             film: {
-              title: 'The Phantom Menace',
-              releaseDate: '1999-05-19',
+              title: 'A New Hope',
+              releaseDate: '1977-05-24',
             },
           },
         },
@@ -62,9 +62,9 @@ describe('Films component', () => {
       </MockedProvider>
     )
 
-    expect(await screen.findByText('A New Hope')).toBeInTheDocument()
+    expect(await screen.findByText('The Phantom Menace')).toBeInTheDocument()
     expect(await screen.findByText('4')).toBeInTheDocument()
     userEvent.click(await screen.findByText('4'))
-    expect(await screen.findByText('The Phantom Menace')).toBeInTheDocument()
+    expect(await screen.findByText('A New Hope')).toBeInTheDocument()
   })
 })
