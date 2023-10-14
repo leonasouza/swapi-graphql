@@ -21,7 +21,6 @@ export const SelectButton = styled.button`
 export const Film = styled.div`
   display: flex;
   flex-direction: column;
-  min-height: 144px;
 `
 
 export const Loader = styled.p`
@@ -34,4 +33,12 @@ export const FilmTitle = styled.span`
 
 export const FilmDate = styled.span`
   font-size: 2rem;
+`
+
+export const FilmDescription = styled.p`
+  margin: 3rem auto 0;
+  max-width: 600px;
+  font-size: 1.2rem;
+  line-height: 2.5rem;
+  text-align: justify;
 `

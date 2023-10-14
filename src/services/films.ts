@@ -4,6 +4,7 @@ export interface FilmInformation {
   film: {
     title: string
     releaseDate: string
+    openingCrawl: string
   }
 }
 
@@ -16,6 +17,7 @@ const GET_FILM_BY_ID = gql`
     film(filmID: $filmId) {
       title
       releaseDate
+      openingCrawl
     }
   }
 `

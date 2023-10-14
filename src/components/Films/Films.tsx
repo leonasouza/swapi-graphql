@@ -33,7 +33,7 @@ export const Films = () => {
 
   return (
     <S.Container>
-      <S.Header>Choose a movie</S.Header>
+      <S.Header>Choose a Star Wars film</S.Header>
       <S.Selector>
         {options.map((option) => (
           <S.SelectButton key={option} onClick={() => setFilmId(option)}>
@@ -49,6 +49,7 @@ export const Films = () => {
           <>
             <S.FilmTitle>{data?.film.title}</S.FilmTitle>
             <S.FilmDate>{releaseDate.toLocaleDateString()}</S.FilmDate>
+            <S.FilmDescription>{data?.film.openingCrawl}</S.FilmDescription>
           </>
         )}
       </S.Film>
