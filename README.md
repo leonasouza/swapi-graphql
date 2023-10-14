@@ -6,7 +6,7 @@ This project uses GraphQL to consume data from the [Star Wars API](https://swapi
 
 - Clone the repository
 - Run `npm i` or `yarn install`
-- Open the url provided in the terminal
+- Open the url provided in the terminal (probably http://127.0.0.1:5173)
 
 ## How to test
 

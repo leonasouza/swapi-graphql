@@ -33,7 +33,7 @@ export const Films = () => {
 
   return (
     <S.Container>
-      <S.Header>Escolha um filme</S.Header>
+      <S.Header>Choose a movie</S.Header>
       <S.Selector>
         {options.map((option) => (
           <S.SelectButton key={option} onClick={() => setFilmId(option)}>
