@@ -1,8 +1,11 @@
 import { ApolloClient, InMemoryCache } from '@apollo/client'
 
+// CONSTANTS
+import { SWAPI_URL } from '../constants'
+
 const client = new ApolloClient({
-  uri: 'https://swapi-graphql.netlify.app/.netlify/functions/index',
+  uri: SWAPI_URL,
   cache: new InMemoryCache(),
-});
+})
 
 export default client

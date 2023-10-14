@@ -3,7 +3,7 @@ import { gql } from '@apollo/client'
 export interface FilmInformation {
   film: {
     title: string
-    releaseDate: Date
+    releaseDate: string
   }
 }
 
@@ -11,7 +11,7 @@ export interface FilmArguments {
   filmId: number
 }
 
-const INFO_FILM = gql`
+const GET_FILM_BY_ID = gql`
   query Query($filmId: ID!) {
     film(filmID: $filmId) {
       title
@@ -20,4 +20,4 @@ const INFO_FILM = gql`
   }
 `
 
-export default INFO_FILM
+export default GET_FILM_BY_ID
